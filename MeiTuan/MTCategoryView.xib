@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MTCategoryView">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="462"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3yS-jL-ZWr">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="462"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="diF-Oc-12V"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="2G7-GV-jQ6"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5Le-vO-sUf">
+                    <rect key="frame" x="200" y="0.0" width="200" height="462"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="8XE-ZS-7D6"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="d1C-Kz-oYq"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5Le-vO-sUf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="48o-Uk-Y6f"/>
+                <constraint firstItem="3yS-jL-ZWr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4uX-hY-bUn"/>
+                <constraint firstAttribute="bottom" secondItem="5Le-vO-sUf" secondAttribute="bottom" id="79K-54-cMx"/>
+                <constraint firstItem="3yS-jL-ZWr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Vzn-md-WmQ"/>
+                <constraint firstItem="5Le-vO-sUf" firstAttribute="leading" secondItem="3yS-jL-ZWr" secondAttribute="trailing" id="d5f-fy-O45"/>
+                <constraint firstAttribute="bottom" secondItem="3yS-jL-ZWr" secondAttribute="bottom" id="d6p-da-1Nx"/>
+                <constraint firstAttribute="trailing" secondItem="5Le-vO-sUf" secondAttribute="trailing" id="gah-6q-lpF"/>
+                <constraint firstItem="3yS-jL-ZWr" firstAttribute="width" secondItem="5Le-vO-sUf" secondAttribute="width" id="hrs-bi-xbx"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mainTableView" destination="3yS-jL-ZWr" id="yCd-J2-kzW"/>
+                <outlet property="subTableView" destination="5Le-vO-sUf" id="n8o-Ux-wyP"/>
+            </connections>
+            <point key="canvasLocation" x="149" y="-133"/>
+        </view>
+    </objects>
+</document>

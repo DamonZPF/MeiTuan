@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTSelectDistrictController">
+            <connections>
+                <outlet property="cover" destination="7R2-z1-w0K" id="8NJ-6E-L0M"/>
+                <outlet property="searchBar" destination="IT7-Jo-a08" id="DEJ-n5-sY8"/>
+                <outlet property="tableView" destination="WTO-kj-8JV" id="Dz0-3H-dvB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="494" height="368"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="IT7-Jo-a08">
+                    <rect key="frame" x="8" y="10" width="478" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="cBk-kj-zUJ"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="hNP-ky-EDs"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WTO-kj-8JV">
+                    <rect key="frame" x="0.0" y="55" width="494" height="313"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zj4-aW-8YL"/>
+                        <outlet property="delegate" destination="-1" id="0KH-vj-WR2"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7R2-z1-w0K">
+                    <rect key="frame" x="0.0" y="55" width="494" height="313"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="coverAction:" destination="-1" eventType="touchUpInside" id="LuS-hf-A9c"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="WTO-kj-8JV" firstAttribute="top" secondItem="IT7-Jo-a08" secondAttribute="bottom" constant="10" id="AeT-40-HkY"/>
+                <constraint firstAttribute="trailing" secondItem="IT7-Jo-a08" secondAttribute="trailing" constant="8" id="EKV-1H-MTd"/>
+                <constraint firstItem="7R2-z1-w0K" firstAttribute="top" secondItem="IT7-Jo-a08" secondAttribute="bottom" constant="10" id="EoY-H1-UV7"/>
+                <constraint firstItem="IT7-Jo-a08" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Qb9-UE-uc8"/>
+                <constraint firstAttribute="bottom" secondItem="WTO-kj-8JV" secondAttribute="bottom" id="T2K-Oo-fDZ"/>
+                <constraint firstItem="IT7-Jo-a08" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="b63-XM-bhh"/>
+                <constraint firstAttribute="bottom" secondItem="7R2-z1-w0K" secondAttribute="bottom" id="bly-Pc-wWz"/>
+                <constraint firstAttribute="trailing" secondItem="7R2-z1-w0K" secondAttribute="trailing" id="g7s-eA-cMK"/>
+                <constraint firstItem="7R2-z1-w0K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="idg-hU-oqa"/>
+                <constraint firstItem="WTO-kj-8JV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qIa-1r-cKA"/>
+                <constraint firstAttribute="trailing" secondItem="WTO-kj-8JV" secondAttribute="trailing" id="vKg-kv-jsz"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="374" y="90"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_login_textfield" width="9" height="11"/>
+    </resources>
+</document>
