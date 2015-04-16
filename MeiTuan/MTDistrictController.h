@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MTDistrictController : UIViewController
-
+@property(nonatomic,strong)UIPopoverController * popVC;
 - (IBAction)changeCity:(id)sender;
 
 @end

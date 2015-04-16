@@ -32,11 +32,11 @@
 }
 
 - (IBAction)changeCity:(id)sender {
-    
+    [self.popVC dismissPopoverAnimated:YES];
     MTSelectDistrictController * selectDistrictVC = [[MTSelectDistrictController alloc]init];
     MTBaseNavController * baseNav = [[MTBaseNavController alloc]initWithRootViewController:selectDistrictVC];
      baseNav.modalPresentationStyle = UIModalPresentationFormSheet;
-    [self presentViewController:baseNav animated:YES completion:nil];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:baseNav animated:YES completion:nil];
     
 }
 @end

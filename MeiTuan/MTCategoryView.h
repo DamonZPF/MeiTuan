@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MTCategoryViewDataScource <NSObject>
+
+@end
+
 @interface MTCategoryView : UIView<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 @property (weak, nonatomic) IBOutlet UITableView *subTableView;
 @property(strong,nonatomic)NSArray * categoryArray; //主表数据
-
 +(instancetype)categoryView;
 @end

@@ -11,6 +11,8 @@
 @interface MTItemView : UIView
 
 @property (weak, nonatomic) IBOutlet UIButton *clickButton;
+@property (weak, nonatomic) IBOutlet UILabel *mianLable;
+@property (weak, nonatomic) IBOutlet UILabel *secondLabel;
 
 +(instancetype)item;
 
