@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF5B42F41AE0D4220087244F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5B42F31AE0D4220087244F /* MBProgressHUD.m */; };
+		AF5B42F91AE0D52D0087244F /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5B42F71AE0D52D0087244F /* MBProgressHUD+MJ.m */; };
+		AF5B42FA1AE0D52D0087244F /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF5B42F81AE0D52D0087244F /* MBProgressHUD.bundle */; };
 		AF913AD31ADF7CF8001F2DDF /* MTDealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF913AD11ADF7CF8001F2DDF /* MTDealCell.m */; };
 		AF913AD41ADF7CF8001F2DDF /* MTDealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF913AD21ADF7CF8001F2DDF /* MTDealCell.xib */; };
 		AF913AF71ADF7D17001F2DDF /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AF913AD71ADF7D17001F2DDF /* MKAnnotationView+WebCache.m */; };
@@ -25,6 +28,10 @@
 		AF913B041ADF7D17001F2DDF /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AF913AF21ADF7D17001F2DDF /* UIImageView+HighlightedWebCache.m */; };
 		AF913B051ADF7D17001F2DDF /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AF913AF41ADF7D17001F2DDF /* UIImageView+WebCache.m */; };
 		AF913B061ADF7D17001F2DDF /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF913AF61ADF7D17001F2DDF /* UIView+WebCacheOperation.m */; };
+		AF913B091ADF957C001F2DDF /* MTThroughLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF913B081ADF957C001F2DDF /* MTThroughLabel.m */; };
+		AFAECDBB1AE5E9600034ABB9 /* MTBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAECDBA1AE5E9600034ABB9 /* MTBaseCollectionViewController.m */; };
+		AFAECDBE1AE5EE790034ABB9 /* MTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAECDBD1AE5EE790034ABB9 /* MTDetailViewController.m */; };
+		AFAECDC01AE5F0A70034ABB9 /* MTDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAECDBF1AE5F0A70034ABB9 /* MTDetailViewController.xib */; };
 		AFB3ECB51ADE0025002C77C1 /* DPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB3ECB11ADE0025002C77C1 /* DPAPI.m */; };
 		AFB3ECB61ADE0025002C77C1 /* DPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB3ECB41ADE0025002C77C1 /* DPRequest.m */; };
 		AFB3ECB91ADE1228002C77C1 /* MTDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB3ECB81ADE1228002C77C1 /* MTDeal.m */; };
@@ -84,6 +91,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF5B42F21AE0D4220087244F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../MBProgressHUD.h; sourceTree = "<group>"; };
+		AF5B42F31AE0D4220087244F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../MBProgressHUD.m; sourceTree = "<group>"; };
+		AF5B42F61AE0D52D0087244F /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		AF5B42F71AE0D52D0087244F /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		AF5B42F81AE0D52D0087244F /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		AF913AD01ADF7CF8001F2DDF /* MTDealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDealCell.h; sourceTree = "<group>"; };
 		AF913AD11ADF7CF8001F2DDF /* MTDealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDealCell.m; sourceTree = "<group>"; };
 		AF913AD21ADF7CF8001F2DDF /* MTDealCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTDealCell.xib; sourceTree = "<group>"; };
@@ -120,6 +132,13 @@
 		AF913AF41ADF7D17001F2DDF /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		AF913AF51ADF7D17001F2DDF /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		AF913AF61ADF7D17001F2DDF /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		AF913B071ADF957C001F2DDF /* MTThroughLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTThroughLabel.h; sourceTree = "<group>"; };
+		AF913B081ADF957C001F2DDF /* MTThroughLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTThroughLabel.m; sourceTree = "<group>"; };
+		AFAECDB91AE5E9600034ABB9 /* MTBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBaseCollectionViewController.h; sourceTree = "<group>"; };
+		AFAECDBA1AE5E9600034ABB9 /* MTBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBaseCollectionViewController.m; sourceTree = "<group>"; };
+		AFAECDBC1AE5EE790034ABB9 /* MTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDetailViewController.h; sourceTree = "<group>"; };
+		AFAECDBD1AE5EE790034ABB9 /* MTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDetailViewController.m; sourceTree = "<group>"; };
+		AFAECDBF1AE5F0A70034ABB9 /* MTDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTDetailViewController.xib; sourceTree = "<group>"; };
 		AFB3ECB01ADE0025002C77C1 /* DPAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPAPI.h; sourceTree = "<group>"; };
 		AFB3ECB11ADE0025002C77C1 /* DPAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPAPI.m; sourceTree = "<group>"; };
 		AFB3ECB21ADE0025002C77C1 /* DPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPConstants.h; sourceTree = "<group>"; };
@@ -227,6 +246,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF5B42F51AE0D43F0087244F /* MBHUD */ = {
+			isa = PBXGroup;
+			children = (
+				AF5B42F61AE0D52D0087244F /* MBProgressHUD+MJ.h */,
+				AF5B42F71AE0D52D0087244F /* MBProgressHUD+MJ.m */,
+				AF5B42F81AE0D52D0087244F /* MBProgressHUD.bundle */,
+				AF5B42F21AE0D4220087244F /* MBProgressHUD.h */,
+				AF5B42F31AE0D4220087244F /* MBProgressHUD.m */,
+			);
+			path = MBHUD;
+			sourceTree = "<group>";
+		};
 		AF913AD51ADF7D17001F2DDF /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +352,8 @@
 				E598EBD91AB6A04E001D531B /* MTCategoryMainCell.m */,
 				E598EBDB1AB6A065001D531B /* MTCategorySubCell.h */,
 				E598EBDC1AB6A065001D531B /* MTCategorySubCell.m */,
+				AF913B071ADF957C001F2DDF /* MTThroughLabel.h */,
+				AF913B081ADF957C001F2DDF /* MTThroughLabel.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -342,6 +375,9 @@
 				E560E59F1AB80AAD00BB89D3 /* MTCitySearchResultController.m */,
 				AFBD7A611ADBB11D00ABC3D6 /* MTSortViewController.h */,
 				AFBD7A621ADBB11D00ABC3D6 /* MTSortViewController.m */,
+				AFAECDBC1AE5EE790034ABB9 /* MTDetailViewController.h */,
+				AFAECDBD1AE5EE790034ABB9 /* MTDetailViewController.m */,
+				AFAECDBF1AE5F0A70034ABB9 /* MTDetailViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -373,6 +409,7 @@
 		E598EBB41AB69B31001D531B /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				AF5B42F51AE0D43F0087244F /* MBHUD */,
 				AF913AD51ADF7D17001F2DDF /* SDWebImage */,
 				AFB3ECAF1ADE0025002C77C1 /* dianpingapi */,
 				E598EBB51AB69B51001D531B /* MJExtension */,
@@ -495,6 +532,8 @@
 			children = (
 				E5A7CAA41AAE99470093C436 /* MTBaseNavController.h */,
 				E5A7CAA51AAE99470093C436 /* MTBaseNavController.m */,
+				AFAECDB91AE5E9600034ABB9 /* MTBaseCollectionViewController.h */,
+				AFAECDBA1AE5E9600034ABB9 /* MTBaseCollectionViewController.m */,
 			);
 			name = BaseVC;
 			sourceTree = "<group>";
@@ -592,12 +631,14 @@
 				E598EBAA1AB6950D001D531B /* categories.plist in Resources */,
 				E598EBA41AB683FF001D531B /* MTCategoryView.xib in Resources */,
 				E598EBAD1AB6950D001D531B /* sorts.plist in Resources */,
+				AF5B42FA1AE0D52D0087244F /* MBProgressHUD.bundle in Resources */,
 				E598EBE71AB6C409001D531B /* MTSelectDistrictController.xib in Resources */,
 				E590D6EA1AB0138800982CB4 /* MTItemView.xib in Resources */,
 				E598EBE21AB6B56F001D531B /* MTDistrictController.xib in Resources */,
 				E598EBAB1AB6950D001D531B /* cities.plist in Resources */,
 				E5A7CA861AAE8FDB0093C436 /* Images.xcassets in Resources */,
 				AF913AD41ADF7CF8001F2DDF /* MTDealCell.xib in Resources */,
+				AFAECDC01AE5F0A70034ABB9 /* MTDetailViewController.xib in Resources */,
 				E598EBAC1AB6950D001D531B /* cityGroups.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +661,7 @@
 				E598EBD01AB69B51001D531B /* MJIvar.m in Sources */,
 				E598EBB01AB696B4001D531B /* UIView+Extension.m in Sources */,
 				AFBD7A661ADBB16300ABC3D6 /* MTSortModel.m in Sources */,
+				AF5B42F91AE0D52D0087244F /* MBProgressHUD+MJ.m in Sources */,
 				AFBD7A631ADBB11D00ABC3D6 /* MTSortViewController.m in Sources */,
 				AFB3ECB51ADE0025002C77C1 /* DPAPI.m in Sources */,
 				AFB3ECB61ADE0025002C77C1 /* DPRequest.m in Sources */,
@@ -647,11 +689,14 @@
 				AFBD7A6A1ADBB4E600ABC3D6 /* MTMetaTool.m in Sources */,
 				AF913B031ADF7D17001F2DDF /* UIImage+WebP.m in Sources */,
 				AF913AFC1ADF7D17001F2DDF /* SDWebImageDownloader.m in Sources */,
+				AF913B091ADF957C001F2DDF /* MTThroughLabel.m in Sources */,
 				E5A7CA7E1AAE8FDB0093C436 /* AppDelegate.m in Sources */,
 				E5FBEC7A1AB7C8FF00361D4C /* MTCityGroupModel.m in Sources */,
 				E598EBD31AB69B51001D531B /* MJType.m in Sources */,
+				AFAECDBB1AE5E9600034ABB9 /* MTBaseCollectionViewController.m in Sources */,
 				AF913B021ADF7D17001F2DDF /* UIImage+MultiFormat.m in Sources */,
 				AF913AFB1ADF7D17001F2DDF /* SDWebImageDecoder.m in Sources */,
+				AF5B42F41AE0D4220087244F /* MBProgressHUD.m in Sources */,
 				E598EBA31AB683FF001D531B /* MTCategoryView.m in Sources */,
 				E560E5A01AB80AAD00BB89D3 /* MTCitySearchResultController.m in Sources */,
 				E5A7CAA61AAE99470093C436 /* MTBaseNavController.m in Sources */,
@@ -668,6 +713,7 @@
 				E598EBCE1AB69B51001D531B /* MJConst.m in Sources */,
 				E598EBDD1AB6A065001D531B /* MTCategorySubCell.m in Sources */,
 				AF913AFA1ADF7D17001F2DDF /* SDWebImageCompat.m in Sources */,
+				AFAECDBE1AE5EE790034ABB9 /* MTDetailViewController.m in Sources */,
 				AF913AF91ADF7D17001F2DDF /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -775,6 +821,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MeiTuan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -786,6 +833,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MeiTuan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

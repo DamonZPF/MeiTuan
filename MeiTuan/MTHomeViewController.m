@@ -7,7 +7,7 @@
 //
 
 #import "MTHomeViewController.h"
-#import "MTConst.h"
+
 #import "UIBarButtonItem+Extension.h"
 #import "MTItemView.h"
 #import "MTCategoryController.h"
@@ -15,11 +15,11 @@
 #import "MTDistrictController.h"
 #import "MTSortViewController.h"
 #import "MTSortModel.h"
-#import "DPAPI.h"
-#import "MTDeal.h"
-#import "MJExtension.h"
-#import "MTDealCell.h"
-@interface MTHomeViewController ()<DPRequestDelegate>
+
+
+#import "MBProgressHUD+MJ.h"
+#import "UIView+AutoLayout.h"
+@interface MTHomeViewController ()
 @property(nonatomic,strong) UIBarButtonItem * categoryItem;
 @property(nonatomic,strong)  UIBarButtonItem * districtItem;
 @property(nonatomic,strong) UIBarButtonItem * sortItem;
@@ -27,83 +27,47 @@
 @property(nonatomic,strong)UIPopoverController * categoryPopVC;
 @property(nonatomic,strong)UIPopoverController * areaPopVC;
 @property(nonatomic,strong)UIPopoverController * sortPopVC;
-@property(nonatomic,strong)NSMutableArray * products;
+
+@property(nonatomic,weak)UIImageView * nodataView;
 @end
 
 @implementation MTHomeViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 
--(NSMutableArray*)products{
 
-    if (_products == nil) {
-        _products = [NSMutableArray array];
-    }
-    return _products;
-}
-
--(instancetype)init{
-    UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];
-    layout.itemSize = CGSizeMake(300, 300);
-    return  [self initWithCollectionViewLayout:layout];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
-     self.collectionView.backgroundColor = MTGlobalBg;
-    [self.collectionView registerNib:[UINib nibWithNibName:@"MTDealCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sortAction:) name:@"MTSrot" object:nil]; //监听排序按钮
+    
+    [self setupNOdataView];
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sortAction:) name:@"MTSrot" object:nil]; //监听排序按钮
+
      //加载导航右边按钮
     [self setupRightItem];
     
     //左边按钮
     [self setupLeftItem];
-    
-    [self loadData]; //加载网络数据
    
 }
 
-#pragma mark 加载网络数据
-
--(void)loadData{
-
-    DPAPI * api = [[DPAPI alloc]init];
-    NSMutableDictionary * params = [NSMutableDictionary dictionary];
+-(void)setupParams:(NSMutableDictionary *)params{
     // 城市
     params[@"city"] = @"北京";
     // 每页的条数
-    params[@"limit"] = @5;
-//    // 分类(类别)
-//    if (self.selectedCategoryName) {
-//        params[@"category"] = @"";
-//    }
-//    // 区域
-//    if (self.selectedRegionName) {
-//        params[@"region"] = @"";
-//    }
-//    // 排序
-//    if (self.selectedSort) {
-//        params[@"sort"] = @(1);
-//    }
-    [api requestWithURL:@"v1/deal/find_deals" params:params delegate:self];
+    params[@"limit"] = @20;
 }
 
-
-- (void)request:(DPRequest *)request didReceiveResponse:(NSURLResponse *)response{
-}
-- (void)request:(DPRequest *)request didReceiveRawData:(NSData *)data{
-}
-- (void)request:(DPRequest *)request didFailWithError:(NSError *)error{
-
-}
-- (void)request:(DPRequest *)request didFinishLoadingWithResult:(id)result{
-
-    NSArray * tempArray = [[MTDeal objectArrayWithKeyValuesArray:result[@"deals"]] mutableCopy];
-    [self.products addObjectsFromArray:tempArray];
-    [self.collectionView reloadData];
+-(void)setupNOdataView{
     
+    UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon_latestBrowse_empty"]];
+    imageView.hidden = YES;
+    [self.view addSubview:imageView];
+    [imageView autoCenterInSuperview];
+    self.nodataView = imageView;
+
 }
+
 
 
 
@@ -188,25 +152,6 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.sortPopVC dismissPopoverAnimated:YES];
 }
 
-
-#pragma mark <UICollectionViewDataSource>
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
-}
-
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
-    return self.products.count;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    MTDealCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.deal = self.products[indexPath.item];
-    return cell;
-}
-
-#pragma mark <UICollectionViewDelegate>
 
 
 
