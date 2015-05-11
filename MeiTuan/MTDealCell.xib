@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
@@ -92,23 +93,44 @@
                             <constraint firstAttribute="height" constant="24" id="wjN-Ky-uCh"/>
                         </constraints>
                     </imageView>
+                    <button hidden="YES" opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y15-ag-GSb">
+                        <rect key="frame" x="0.0" y="0.0" width="305" height="305"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_choosed" translatesAutoresizingMaskIntoConstraints="NO" id="e6a-xz-RmL">
+                        <rect key="frame" x="279" y="279" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="2OC-e3-8uQ"/>
+                            <constraint firstAttribute="height" constant="26" id="xMf-Rw-Vw4"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="e6a-xz-RmL" secondAttribute="bottom" id="3RL-ZC-zPV"/>
                 <constraint firstItem="AhP-s0-XNA" firstAttribute="top" secondItem="leD-CM-6Zm" secondAttribute="top" id="5OI-hn-0ZS"/>
+                <constraint firstItem="y15-ag-GSb" firstAttribute="top" secondItem="leD-CM-6Zm" secondAttribute="top" id="Apv-Qb-gs6"/>
                 <constraint firstAttribute="bottom" secondItem="a5S-9d-0ff" secondAttribute="bottom" constant="10" id="Db4-HB-ft9"/>
                 <constraint firstItem="a5S-9d-0ff" firstAttribute="leading" secondItem="leD-CM-6Zm" secondAttribute="leading" constant="10" id="HcG-F1-Zbe"/>
+                <constraint firstAttribute="trailing" secondItem="e6a-xz-RmL" secondAttribute="trailing" id="KeO-Y5-ADe"/>
                 <constraint firstAttribute="trailing" secondItem="a5S-9d-0ff" secondAttribute="trailing" constant="10" id="PyO-lA-tfm"/>
+                <constraint firstAttribute="trailing" secondItem="y15-ag-GSb" secondAttribute="trailing" id="RKR-iR-4oe"/>
                 <constraint firstAttribute="trailing" secondItem="L2U-Fs-ESo" secondAttribute="trailing" constant="5" id="URe-bT-rod"/>
                 <constraint firstItem="L2U-Fs-ESo" firstAttribute="top" secondItem="leD-CM-6Zm" secondAttribute="top" constant="5" id="bdt-Mb-Mlb"/>
                 <constraint firstItem="a5S-9d-0ff" firstAttribute="top" secondItem="L2U-Fs-ESo" secondAttribute="bottom" constant="10" id="gem-QM-9UQ"/>
+                <constraint firstAttribute="bottom" secondItem="y15-ag-GSb" secondAttribute="bottom" id="pRA-Nr-WL6"/>
+                <constraint firstItem="y15-ag-GSb" firstAttribute="leading" secondItem="leD-CM-6Zm" secondAttribute="leading" id="wmF-Um-QOv"/>
                 <constraint firstItem="AhP-s0-XNA" firstAttribute="leading" secondItem="leD-CM-6Zm" secondAttribute="leading" id="wtM-dx-LiU"/>
                 <constraint firstItem="L2U-Fs-ESo" firstAttribute="leading" secondItem="leD-CM-6Zm" secondAttribute="leading" constant="5" id="yeU-T0-pyo"/>
             </constraints>
             <size key="customSize" width="305" height="305"/>
             <connections>
+                <outlet property="cover" destination="y15-ag-GSb" id="OVR-SG-Wg9"/>
                 <outlet property="currentPriceLabel" destination="Svs-aR-Kgo" id="QW5-sZ-dlb"/>
                 <outlet property="dealNewView" destination="AhP-s0-XNA" id="bKJ-gq-vfd"/>
                 <outlet property="descLabel" destination="E92-eQ-xc2" id="v7P-Ig-Abh"/>
@@ -121,6 +143,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="ic_choosed" width="26" height="26"/>
         <image name="ic_deal_new" width="38" height="24"/>
         <image name="placeholder_deal" width="273" height="172"/>
     </resources>

@@ -12,4 +12,5 @@
 -(NSDictionary*)replacedKeyFromPropertyName{
     return @{@"desc" : @"description"};
 }
+MJCodingImplementation
 @end

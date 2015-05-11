@@ -15,7 +15,7 @@
 #import "MTDistrictController.h"
 #import "MTSortViewController.h"
 #import "MTSortModel.h"
-
+#import "MTCollectedController.h"
 
 #import "MBProgressHUD+MJ.h"
 #import "UIView+AutoLayout.h"
@@ -33,7 +33,6 @@
 
 @implementation MTHomeViewController
 
-static NSString * const reuseIdentifier = @"Cell";
 
 
 
@@ -136,9 +135,11 @@ static NSString * const reuseIdentifier = @"Cell";
 
     
 }
-#pragma mark 搜索
+#pragma mark 搜索 (收藏)
 -(void)searchClick{
 
+    MTCollectedController * collectedVC = [[MTCollectedController alloc]init];
+    [self.navigationController pushViewController:collectedVC animated:YES];
 }
 
 

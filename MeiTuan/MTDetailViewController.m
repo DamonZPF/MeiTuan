@@ -8,6 +8,7 @@
 
 #import "MTDetailViewController.h"
 #import "MTConst.h"
+#import "MTMetaCaChe.h"
 @interface MTDetailViewController ()<UIWebViewDelegate>
 
 @end
@@ -22,6 +23,7 @@
     NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     self.webView.delegate = self;
     [self.webView loadRequest:request];
+    self.collectBtn.selected = [MTMetaCaChe isCollected:self.dealModel];
 }
 
 
@@ -43,7 +45,17 @@
 
 #pragma 收藏到本地
 - (IBAction)collecAction:(id)sender {
-    
+    UIButton * btn = (UIButton*)sender;
+    if (btn.selected) {
+        //取消收藏
+        [MTMetaCaChe removeCollectDeal:self.dealModel];
+        
+        
+    }else{
+        //收藏
+        [MTMetaCaChe addCollectDeal:self.dealModel];
+    }
+    btn.selected = !btn.selected;
     
 }
 @end

@@ -27,4 +27,8 @@
 @property (copy, nonatomic) NSString *s_image_url;
 
 @property(copy,nonatomic)NSString * deal_h5_url;
+
+@property(assign,nonatomic)BOOL editing;
+
+@property(assign,nonatomic)BOOL checking;
 @end

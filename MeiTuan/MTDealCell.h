@@ -13,4 +13,5 @@
 @interface MTDealCell : UICollectionViewCell
 @property (nonatomic, strong) MTDeal *deal;
 
+
 @end

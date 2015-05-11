@@ -20,7 +20,10 @@
 /**
  属性名不能以new开头
  */
-@property (weak, nonatomic) IBOutlet UIImageView *dealNewView; 
+@property (weak, nonatomic) IBOutlet UIImageView *dealNewView;
+
+@property (weak, nonatomic) IBOutlet UIButton *cover; //遮盖
+
 @end
 
 @implementation MTDealCell
@@ -32,6 +35,7 @@
     // 平铺
 //    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_dealcell"]];
 }
+
 
 - (void)setDeal:(MTDeal *)deal
 {
@@ -56,7 +60,15 @@
     
     // 原价
     self.listPriceLabel.text = [NSString stringWithFormat:@"¥ %@", deal.list_price];
-}
+
+    
+    if (deal.editing) {
+        self.cover.hidden = NO;
+    }else{
+        self.cover.hidden = YES;
+    }
+    
+   }
 
 - (void)drawRect:(CGRect)rect
 {

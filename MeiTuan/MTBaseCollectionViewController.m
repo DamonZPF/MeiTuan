@@ -41,6 +41,11 @@ static NSString * const reuseIdentifier = @"Cell";
        [self loadData]; //加载网络数据
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+       [self viewWillTransitionToSize:CGSizeMake(self.collectionView.frame.size.width, 0) withTransitionCoordinator:nil];
+}
+
 
 #pragma mark 加载网络数据
 -(void)loadData{
@@ -92,6 +97,8 @@ static NSString * const reuseIdentifier = @"Cell";
     int col = size.width == 1024?3:2;
     CGFloat inset =  (size.width - col * flowLayout.itemSize.width) / (col + 1);
     flowLayout.sectionInset = UIEdgeInsetsMake(inset, inset, inset, inset);
+    
+    flowLayout.minimumLineSpacing = 50;
     
 }
 
